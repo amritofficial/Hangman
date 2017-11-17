@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_stage2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.example.amritsingh.hangman.Stage2">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/gamestage2"
+        android:id="@+id/imageView1"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true" />
+
+
+    <Button
+        android:text="Start Game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startGame"
+        android:onClick="startGameFunction"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Hard"
+        android:textOff="Hard"
+        android:textOn="Hard"
+        android:background="@android:color/transparent"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_alignBaseline="@+id/Medium"
+        android:layout_alignBottom="@+id/Medium"
+        android:layout_toRightOf="@+id/Medium"
+        android:layout_toEndOf="@+id/Medium" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/easy"
+        android:textOff="Easy"
+        android:textOn="Easy"
+        android:background="@android:color/transparent"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:paddingTop="20dp"
+        android:textColor="@color/colorAccent"
+        android:layout_above="@+id/tMario"
+        android:layout_toLeftOf="@+id/Medium"
+        android:layout_toStartOf="@+id/Medium"
+        android:layout_marginBottom="88dp" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Medium"
+        android:textOff="Medium"
+        android:textOn="Medium"
+        android:background="@android:color/transparent"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_alignBaseline="@+id/easy"
+        android:layout_alignBottom="@+id/easy"
+        android:layout_alignLeft="@+id/startGame"
+        android:layout_alignStart="@+id/startGame" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tMickey"
+        android:textOff="Mickey"
+        android:textOn="Mickey"
+        android:background="@android:color/transparent"
+        android:textSize="22dp"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="60dp"
+        android:layout_above="@+id/startGame"
+        android:layout_toRightOf="@+id/tMario"
+        android:layout_toEndOf="@+id/tMario" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tMario"
+        android:textOff="Mario"
+        android:textOn="Mario"
+        android:background="@android:color/transparent"
+        android:textSize="22dp"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_alignBaseline="@+id/tMickey"
+        android:layout_alignBottom="@+id/tMickey"
+        android:layout_toRightOf="@+id/tCyote"
+        android:layout_toEndOf="@+id/tCyote" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tCyote"
+        android:textOff="Cyote"
+        android:textOn="Cyote"
+        android:background="@android:color/transparent"
+        android:textSize="22dp"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_alignBaseline="@+id/tMario"
+        android:layout_alignBottom="@+id/tMario"
+        android:layout_alignLeft="@+id/easy"
+        android:layout_alignStart="@+id/easy"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp" />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:inputType=""
+        android:ems="2"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/editText2"
+        android:maxLength="4"
+        android:textSize="24dp"
+        android:layout_width="wrap_content"
+        android:width="80dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="66dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_above="@+id/easy"
+        android:layout_toRightOf="@+id/tCyote"
+        android:layout_toEndOf="@+id/tCyote" />
+
+
+</RelativeLayout>

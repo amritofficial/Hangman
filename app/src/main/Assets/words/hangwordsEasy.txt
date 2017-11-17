@@ -1,0 +1,26 @@
+PINEAPPLE::Ananas
+WATERMELON::A vegetable fruit
+MANGOES::King of fruits
+ORANGES::Citrus fruit of summers
+APPLE::Keeps doctor away
+MISSISSAUGA::Lake Ontario City
+BRAMPTON::City of Flowers
+DOG::Man's best friend
+AIRPLANE::Sky vehicle
+PEOPLE::Living beings
+CLOCK::Whats the time
+BOTTLE::Can hold water
+HOUSE::Where people live
+RING::Finger jewellery
+COMPUTER::Machine of life
+STADIUM::Place to watch match
+ELEVATOR::I can't climb stairs
+BAG::Thing used to carry things
+PEN::Writing partner
+ELEPHANT::Giant animal
+FLOWER::Symbol of love
+DRAGONFRUIT::Dragon don't eat fruit
+MILK::Drink that makes us strong
+FISH::Protein diet
+BEAR::Animal who loves honey
+DRIVER::Who drives car

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stripes"
+    android:shadowColor="@color/red"
+    android:shadowRadius="10"
+    android:shadowDx="20"
+    android:weightSum="1">
+
+    <TextView
+        android:text="You Lose!!!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lose"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:textSize="40dp"
+        android:textColor="@color/colorAccent"
+        android:shadowColor="@color/red"
+        android:shadowRadius="10"
+        android:shadowDx="20" />
+
+    <TextView
+        android:text="Do You Wanna Play Again?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/playAgain"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:textSize="28dp"
+        android:textColor="@color/colorAccent"
+        android:shadowColor="@color/red"
+        android:shadowRadius="10"
+        android:shadowDx="20" />
+
+</LinearLayout>

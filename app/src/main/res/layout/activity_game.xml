@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.amritsingh.hangman.gameActivity"
+    android:padding="0dp">
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gamestage3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY"
+        android:id="@+id/gameStage" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/wordMain"
+        android:textSize="34dp"
+        android:textAlignment="center"
+        android:paddingTop="360dp"
+        android:textColor="@color/colorAccent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:shadowDx="20" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hint"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:paddingTop="308dp"
+        android:textColor="@color/colorAccent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="5"
+        android:shadowDx="10" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:srcCompat="@android:color/transparent"
+        android:id="@+id/hangmanImages"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/c"
+            android:id="@+id/imageButtonC"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonB"
+            android:layout_toEndOf="@+id/imageButtonB"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/b"
+            android:id="@+id/imageButtonB"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonA"
+            android:layout_toEndOf="@+id/imageButtonA"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/d"
+            android:id="@+id/imageButtonD"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonC"
+            android:layout_toEndOf="@+id/imageButtonC"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/e"
+            android:id="@+id/imageButtonE"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonD"
+            android:layout_toEndOf="@+id/imageButtonD"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/f"
+            android:id="@+id/imageButtonF"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonE"
+            android:layout_toEndOf="@+id/imageButtonE"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/g"
+            android:id="@+id/imageButtonG"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonF"
+            android:layout_toEndOf="@+id/imageButtonF"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/h"
+            android:id="@+id/imageButtonH"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonG"
+            android:layout_toEndOf="@+id/imageButtonG"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_alignBottom="@+id/imageButtonG"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/i"
+            android:id="@+id/imageButtonI"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonH"
+            android:layout_toEndOf="@+id/imageButtonH"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/a"
+            android:id="@+id/imageButtonA"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="keyboardActions"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_marginBottom="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/k"
+            android:id="@+id/imageButtonK"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonJ"
+            android:layout_toEndOf="@+id/imageButtonJ"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/l"
+            android:id="@+id/imageButtonL"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonK"
+            android:layout_toEndOf="@+id/imageButtonK"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/m"
+            android:id="@+id/imageButtonM"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonL"
+            android:layout_toEndOf="@+id/imageButtonL"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/n"
+            android:id="@+id/imageButtonN"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonM"
+            android:layout_toEndOf="@+id/imageButtonM"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/o"
+            android:id="@+id/imageButtonO"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonN"
+            android:layout_toEndOf="@+id/imageButtonN"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/p"
+            android:id="@+id/imageButtonP"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonO"
+            android:layout_toEndOf="@+id/imageButtonO"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/q"
+            android:id="@+id/imageButtonQ"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonP"
+            android:layout_toEndOf="@+id/imageButtonP"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/r"
+            android:id="@+id/imageButtonR"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageButtonQ"
+            android:layout_toEndOf="@+id/imageButtonQ"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:onClick="keyboardActions"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/j"
+            android:id="@+id/imageButtonJ"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="keyboardActions"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:padding="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/z"
+            android:id="@+id/imageButtonZ"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:onClick="keyboardActions"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="33dp"
+            android:layout_marginEnd="33dp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/y"
+            android:id="@+id/imageButtonY"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:onClick="keyboardActions"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/imageButtonZ"
+            android:layout_toStartOf="@+id/imageButtonZ"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/x"
+            android:id="@+id/imageButtonX"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:onClick="keyboardActions"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/imageButtonY"
+            android:layout_toStartOf="@+id/imageButtonY"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/w"
+            android:id="@+id/imageButtonW"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:onClick="keyboardActions"
+            android:layout_toLeftOf="@+id/imageButtonX"
+            android:layout_toStartOf="@+id/imageButtonX"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentTop="true" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/v"
+            android:id="@+id/imageButtonV"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:onClick="keyboardActions"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/imageButtonW"
+            android:layout_alignEnd="@+id/imageButtonW"
+            android:layout_marginRight="36dp"
+            android:layout_marginEnd="36dp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/s"
+            android:id="@+id/imageButtonS"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:onClick="keyboardActions"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/imageButtonU"
+            android:layout_toStartOf="@+id/imageButtonU"
+            android:layout_marginRight="9dp"
+            android:layout_marginEnd="9dp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/t"
+            android:id="@+id/imageButtonT"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:onClick="keyboardActions"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/imageButtonS"
+            android:layout_toStartOf="@+id/imageButtonS"
+            android:layout_marginRight="9dp"
+            android:layout_marginEnd="9dp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/u"
+            android:id="@+id/imageButtonU"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:onClick="keyboardActions"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/imageButtonV"
+            android:layout_toStartOf="@+id/imageButtonV"
+            android:layout_marginRight="9dp"
+            android:layout_marginEnd="9dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:layout_alignTop="@+id/hangmanImages"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="37dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:textColor="@color/cyan"
+            android:shadowColor="@color/black"
+            android:shadowDx="10"
+            android:shadowDy="2"
+            android:shadowRadius="10"
+            android:id="@+id/score"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:layout_marginTop="220dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/level"
+            android:textSize="38dp"
+            android:textColor="@color/colorAccent"
+            android:shadowColor="@color/black"
+            android:shadowRadius="10"
+            android:shadowDx="10"
+            android:shadowDy="2"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="78dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="170dp"
+        android:layout_height="155dp"
+        android:id="@+id/linearLayout">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/hangman"
+            android:foregroundGravity="center"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
